@@ -7,18 +7,26 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		CE055FEB2C46DF9300BAE540 /* JSONfile.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE055FEA2C46DF9300BAE540 /* JSONfile.swift */; };
+		CE055FED2C46E47F00BAE540 /* UI-personal.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE055FEC2C46E47F00BAE540 /* UI-personal.swift */; };
 		CE334A202C4432D40016598E /* Inc_ExpApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE334A1F2C4432D40016598E /* Inc_ExpApp.swift */; };
 		CE334A222C4432D40016598E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CE334A212C4432D40016598E /* ContentView.swift */; };
 		CE334A242C4432D70016598E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE334A232C4432D70016598E /* Assets.xcassets */; };
 		CE334A272C4432D70016598E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CE334A262C4432D70016598E /* Preview Assets.xcassets */; };
+		CECE61A22C454BCB001EFEDA /* SecondView.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE61A12C454BCB001EFEDA /* SecondView.swift */; };
+		CECE61A42C454F1D001EFEDA /* ApiСonnection.swift in Sources */ = {isa = PBXBuildFile; fileRef = CECE61A32C454F1D001EFEDA /* ApiСonnection.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		CE055FEA2C46DF9300BAE540 /* JSONfile.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONfile.swift; sourceTree = "<group>"; };
+		CE055FEC2C46E47F00BAE540 /* UI-personal.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UI-personal.swift"; sourceTree = "<group>"; };
 		CE334A1C2C4432D40016598E /* Inc&Exp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Inc&Exp.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		CE334A1F2C4432D40016598E /* Inc_ExpApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Inc_ExpApp.swift; sourceTree = "<group>"; };
 		CE334A212C4432D40016598E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		CE334A232C4432D70016598E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		CE334A262C4432D70016598E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		CECE61A12C454BCB001EFEDA /* SecondView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecondView.swift; sourceTree = "<group>"; };
+		CECE61A32C454F1D001EFEDA /* ApiСonnection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ApiСonnection.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -53,6 +61,10 @@
 			children = (
 				CE334A1F2C4432D40016598E /* Inc_ExpApp.swift */,
 				CE334A212C4432D40016598E /* ContentView.swift */,
+				CE055FEC2C46E47F00BAE540 /* UI-personal.swift */,
+				CECE61A32C454F1D001EFEDA /* ApiСonnection.swift */,
+				CE055FEA2C46DF9300BAE540 /* JSONfile.swift */,
+				CECE61A12C454BCB001EFEDA /* SecondView.swift */,
 				CE334A232C4432D70016598E /* Assets.xcassets */,
 				CE334A252C4432D70016598E /* Preview Content */,
 			);
@@ -137,7 +149,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CE055FEB2C46DF9300BAE540 /* JSONfile.swift in Sources */,
+				CE055FED2C46E47F00BAE540 /* UI-personal.swift in Sources */,
+				CECE61A22C454BCB001EFEDA /* SecondView.swift in Sources */,
 				CE334A222C4432D40016598E /* ContentView.swift in Sources */,
+				CECE61A42C454F1D001EFEDA /* ApiСonnection.swift in Sources */,
 				CE334A202C4432D40016598E /* Inc_ExpApp.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -272,6 +288,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Inc&Exp/Preview Content\"";
+				DEVELOPMENT_TEAM = T798VCX5NK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -300,6 +317,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Inc&Exp/Preview Content\"";
+				DEVELOPMENT_TEAM = T798VCX5NK;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
