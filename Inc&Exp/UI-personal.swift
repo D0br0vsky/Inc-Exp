@@ -25,3 +25,12 @@ struct BaseForGraphic: View {
     }
 }
 
+
+struct JSONTest: View {
+    var body: some View {
+        Rectangle()
+            
+    }
+}
+
+

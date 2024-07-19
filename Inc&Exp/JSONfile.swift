@@ -38,6 +38,7 @@ class apiCall {
 }
 
 struct JSONView: View {
+    
     @State var person = [Person]()
     
     var body: some View {
