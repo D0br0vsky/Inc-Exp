@@ -16,14 +16,17 @@ struct Person: Codable, Identifiable {
     var email: String
 }
 
-class apiCall {
-    func getUserComments(completion:@escaping ([Person]) -> ()) {
-        guard let url = URL(string: "https://jsonplaceholder.typicode.com/users") else { return }
+
+class PersonData: ObservableObject {
+    @Published var person: Person?
+    
+    func fetchUser(completion:@escaping (Person?) -> ()) {
+        guard let url = URL(string: "https://jsonplaceholder.typicode.com/users/3") else { return }
         
         URLSession.shared.dataTask(with: url) { (data, _, _) in
             guard let data = data else { return }
             do {
-                let person = try JSONDecoder().decode([Person].self, from: data)
+                let person = try JSONDecoder().decode(Person.self, from: data)
                 print(person)
                 
                 DispatchQueue.main.async {
@@ -37,32 +40,75 @@ class apiCall {
     }
 }
 
+
+
 struct JSONView: View {
     
-    @State var person = [Person]()
+    @StateObject private var personData = PersonData()
     
     var body: some View {
         NavigationView {
-            List(person) { persone in
-                VStack(alignment: .leading) {
-                    Text(persone.name)
-                        .font(.title)
-                        .fontWeight(.bold)
-                    Text(persone.username)
-                        .font(.title)
-                    Text(persone.email)
+            VStack(alignment: .leading) {
+                if let person = personData.person {
+                    VStack(alignment: .leading) {
+                        Text(person.name)
+                            .font(.title)
+                            .fontWeight(.bold)
+                        Text(person.username)
+                            .font(.title)
+                        Text(person.email)
+                            .font(.title)
+                    }
+                    .padding()
+                } else {
+                    Text("Loading...")
                         .font(.title)
                 }
             }
             .onAppear {
-                apiCall().getUserComments { (person) in
-                    self.person = person
+                personData.fetchUser { person in
+                    self.personData.person = person
                 }
             }
-            .navigationTitle("Albums")
+            .navigationTitle("User Details")
         }
     }
 }
+
+
+
+
+
+
+/*
+ struct JSONView: View {
+ 
+ @State var person = [Person]()
+ 
+ var body: some View {
+ NavigationView {
+ List(person) { persone in
+ VStack(alignment: .leading) {
+ Text(persone.name)
+ .font(.title)
+ .fontWeight(.bold)
+ Text(persone.username)
+ .font(.title)
+ Text(persone.email)
+ .font(.title)
+ }
+ }
+ .onAppear {
+ PersonData().getUserComments { (person) in
+ self.person = person
+ }
+ }
+ .navigationTitle("Albums")
+ }
+ }
+ }
+ */
+
 
 
 

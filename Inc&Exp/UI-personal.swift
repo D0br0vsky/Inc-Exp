@@ -26,11 +26,29 @@ struct BaseForGraphic: View {
 }
 
 
-struct JSONTest: View {
-    var body: some View {
-        Rectangle()
-            
-    }
-}
 
-
+//
+//struct JSONTest: View {
+//    @EnvironmentObject var personData: PersonData
+//    
+//    var body: some View {
+//        
+//        NavigationView {
+//            List(personData) { persone in
+//                VStack(alignment: .leading) {
+//                    
+//                    Rectangle()
+//                        .frame(width: 350, height: 250)
+//                    Text(persone.name)
+//                        .font(.title)
+//                        .fontWeight(.bold)
+//                    Text(persone.username)
+//                        .font(.title)
+//                    Text(persone.email)
+//                        .font(.title)
+//                }
+//            }
+//            .navigationTitle("Albums")
+//        }
+//    }
+//}
