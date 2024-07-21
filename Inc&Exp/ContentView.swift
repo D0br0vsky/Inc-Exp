@@ -10,11 +10,13 @@ import SwiftUI
 struct ContentView: View {
     var body: some View {
         VStack{
+            //Spacer()
+            //BaseForWeather()
             Spacer()
-            BaseForWeather()
+            JSONView()
             Spacer()
-            BaseForGraphic()
-            Spacer()
+            //BaseForWeather()
+            //Spacer()
         }
     }
 }

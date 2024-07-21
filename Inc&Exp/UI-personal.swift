@@ -11,7 +11,7 @@ struct BaseForWeather: View {
     var body: some View {
         Rectangle()
             .fill(.blue)
-            .frame(width: 350, height: 250)
+            .frame(width: 90, height: 90)
             .cornerRadius(20)
     }
 }
